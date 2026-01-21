@@ -1,0 +1,82 @@
+# Dependencies
+node_modules/
+target/
+dist/
+build/
+
+
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# User-specific files
+.vs/
+*.userprefs
+
+# Build outputs
+out/
+.nyc_output/
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# Maven
+.mvn/
+bin/
+
+# Backend specific
+backend/target/
+backend/bin/
+
+# Frontend specific
+frontend/node_modules/
+frontend/build/
+
+# System files
+Application Data/
+Cookies/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Start Menu/
+Templates/
+AppData/
+
+# External dependencies that should not be included in the project
+apache-maven-3.9.12-bin/
+mysql-8.0.43-winx64/
+mysql-connector-j-8.0.33 - Copy/
+
+# Temporary and debug files
+*.bak
+*.tmp
+*.log
+email_*.md
+*_debug*.bat
+*_env.bat
+test_*.py
+test_*.md
+verify_*.md
+emergency_*.md
+final_*.md

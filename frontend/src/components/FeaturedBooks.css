@@ -1,0 +1,266 @@
+.featured-books-horizontal-container {
+  width: 100%;
+}
+
+.featured-books-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+
+.books-horizontal-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  padding: 1rem 0;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch; /* iOS Safari */
+  width: 100%;
+}
+
+.books-horizontal-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.books-horizontal-scroll.dragging {
+  cursor: grabbing;
+}
+
+.book-card {
+  flex: 0 0 auto;
+  width: 250px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background: white;
+  position: relative;
+}
+
+.book-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover {
+  transform: scale(1.05);
+}
+
+.book-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.book-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.book-author {
+  color: #7f8c8d;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.book-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.book-genre {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+}
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.book-price .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.btn {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn.w-full {
+  width: 100%;
+}
+
+.scroll-arrow {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  z-index: 10;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.scroll-arrow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+}
+
+.scroll-arrow:active {
+  transform: scale(0.95);
+}
+
+.left-arrow {
+  margin-right: -25px;
+}
+
+.right-arrow {
+  margin-left: -25px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 0.75rem !important;
+}
+
+.mt-4 {
+  margin-top: 1rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .book-card {
+    width: 220px;
+  }
+
+  .book-image {
+    height: 270px;
+  }
+
+  .scroll-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .left-arrow {
+    margin-right: -20px;
+  }
+
+  .right-arrow {
+    margin-left: -20px;
+  }
+
+  .books-horizontal-scroll {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-card {
+    width: 200px;
+  }
+
+  .book-image {
+    height: 240px;
+  }
+
+  .book-info {
+    padding: 1rem;
+  }
+
+  .book-title {
+    font-size: 1.1rem;
+  }
+
+  .scroll-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth scrolling behavior for browsers that support it */
+@media (prefers-reduced-motion: no-preference) {
+  .books-horizontal-scroll {
+    scroll-behavior: smooth;
+  }
+}
